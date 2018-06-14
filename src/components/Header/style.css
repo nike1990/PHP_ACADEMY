@@ -1,0 +1,11 @@
+.header {
+    height: 100px;
+    background: greenyellow;
+    margin-bottom: 30px;
+}
+.navList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px;
+}
