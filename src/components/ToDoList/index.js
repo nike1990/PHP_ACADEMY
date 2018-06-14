@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import {connect} from 'react-redux'
 
 import List from './components/List'
 
@@ -72,14 +71,5 @@ class ToDoList extends Component {
         )
     }
 }
-const mapStateToProps = state => ({
 
-})
-
-const mapActionsToProps = dispatch => ({
-    addItem (value) {
-        dispatch({type: 'ADD_ITEM', payload: value})
-    }
-})
-
-export default connect(mapStateToProps, mapActionsToProps)(ToDoList)
+export default (ToDoList)
