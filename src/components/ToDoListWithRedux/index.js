@@ -7,6 +7,13 @@ class ToDoListWithRedux extends Component {
     state = {
         value: ''
     }
+    componentDidMount () {
+        this.elem.addEventListener('keypress', (e) => {
+            if (e.keyCode === 13) {
+              this.handleClickBtn()
+            }
+        })
+    }
     handleClickBtn = () => {
         if (this.state.value) {
             this.props.addElementToList(this.state.value)
@@ -24,6 +31,7 @@ class ToDoListWithRedux extends Component {
                     type="text"
                     onChange={this.handleChangeValue}
                     value={value}
+                    ref={elem => {this.elem = elem}}
                 />
                 <button
                     onClick={this.handleClickBtn}
